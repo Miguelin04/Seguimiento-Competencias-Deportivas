@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #000;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.eventos-deportivos .indicadores button {
+  background: #000;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.eventos-deportivos .indicadores button:hover,
+.eventos-deportivos .indicadores button.activo {
+  background: red;
+}
+
+.eventos-deportivos {
+  margin-bottom: 70px;
+}
+
+.eventos-deportivos .contenedor-principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.eventos-deportivos .flecha-izquierda,
+.eventos-deportivos .flecha-derecha {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.eventos-deportivos .flecha-izquierda:hover,
+.eventos-deportivos .flecha-derecha:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.eventos-deportivos .contenedor-principal .flecha-izquierda {
+  left: 0;
+}
+
+.eventos-deportivos .contenedor-principal .flecha-derecha {
+  right: 0;
+}
+
+.eventos-deportivos .contenedor-carousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.eventos-deportivos .contenedor-carousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.eventos-deportivos .contenedor-carousel .carousel .evento {
+  min-width: 20%;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.eventos-deportivos .contenedor-carousel .carousel .evento.hover {
+  transform: scale(1, 2);
+  transform-origin: center;
+}
+
+.eventos-deportivos .contenedor-carousel .carousel .evento img {
+  width: 100%;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 800px) {
+  header .logotipo {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  header .contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .evento-principal {
+    font-size: 14px;
+  }
+
+  .eventos-deportivos .contenedor-principal .flecha-izquierda,
+  .eventos-deportivos .contenedor-principal .flecha-derecha {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
